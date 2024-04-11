@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "FLanHu",
+  "version": "2.0.0",
+  "description": "基于蓝湖UI稿生成代码",
+  "icons": {
+    "16": "icons/icon_16.png",
+    "32": "icons/icon_32.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "action": {
+    "default_popup": "actions/setting-page.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "common/language.js",
+        "content_scripts/helper/clip-board.min.js",
+        "content_scripts/helper/utils.js",
+        "content_scripts/helper/parser.js",
+        "content_scripts/helper/ui-maker.js",
+        "content_scripts/language/generate-flutter-code.js",
+        "content_scripts/language/generate-rn-code.js",
+        "content_scripts/inject.js"
+      ],
+      "matches": [
+        "https://lanhuapp.com/web/*"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

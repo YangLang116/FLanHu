@@ -1,0 +1,30 @@
+body {
+    width: 220px;
+}
+
+fieldset {
+    border-radius: 5px;
+    border-color: #ECECEC;
+    border-width: 1px;
+}
+
+legend {
+    color: #666;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.item {
+    margin: 8px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+label {
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
